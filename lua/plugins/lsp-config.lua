@@ -11,9 +11,17 @@ return {
             require("mason-lspconfig").setup({
                 ensure_installed = {
                     "lua_ls",
-                    "elixirls"
+                    "elixirls",
                 }
             })
+        end
+    },
+    {
+        "folke/trouble.nvim",
+        dependencies = { 'nvim-tree/nvim-web-devicons' },
+        opts = {},
+        config = function()
+            vim.keymap.set('n', '<leader>tt', ':TroubleToggle<CR>')
         end
     },
     {
