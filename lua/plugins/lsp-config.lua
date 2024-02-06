@@ -30,7 +30,9 @@ return {
         config = function()
             local lspconfig = require('lspconfig')
             lspconfig.lua_ls.setup {}
-            lspconfig.elixirls.setup {}
+            lspconfig.elixirls.setup {
+            cmd = {"/Users/rderienzo/.local/share/nvim/mason/packages/elixir-ls/language_server.sh"}
+            }
 
             --LSP keymaps
             vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
